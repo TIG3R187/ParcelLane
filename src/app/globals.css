@@ -91,6 +91,67 @@ select:focus-visible {
   font-weight: 600;
   transition: color 0.2s;
 }
+.mobile-menu-toggle {
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  border: 1px solid #ffffff40;
+  border-radius: 8px;
+  color: #fff;
+  list-style: none;
+}
+.mobile-menu-toggle::-webkit-details-marker {
+  display: none;
+}
+.menu-close-icon,
+.mobile-menu[open] .menu-open-icon {
+  display: none;
+}
+.mobile-menu[open] .menu-close-icon {
+  display: block;
+}
+.mobile-menu-panel {
+  position: absolute;
+  inset: 100% 0 auto;
+  padding: 8px 24px 24px;
+  background: #0b1d2b;
+  border-top: 1px solid #ffffff1a;
+  box-shadow: 0 18px 24px #07172225;
+  animation: page-enter 150ms ease-out;
+}
+.page-enter {
+  animation: page-enter 180ms ease-out;
+}
+@keyframes page-enter {
+  from {
+    transform: translateY(5px);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+.navigation-progress {
+  position: fixed;
+  inset: 0 0 auto;
+  z-index: 100;
+  height: 3px;
+  background: #f7e6db;
+  overflow: hidden;
+}
+.navigation-progress::after {
+  content: "";
+  display: block;
+  width: 30%;
+  height: 100%;
+  background: #ce4307;
+  animation: loading-travel 1.4s ease-in-out infinite alternate;
+}
+@keyframes loading-travel {
+  to {
+    transform: translateX(230%);
+  }
+}
 .nav-link:hover,
 .nav-link[aria-current="page"] {
   color: #ff9459;

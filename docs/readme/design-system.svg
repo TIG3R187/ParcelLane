@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="230" viewBox="0 0 1100 230" role="img" aria-labelledby="title">
+  <title id="title">ParcelLane design system: deep navy #0B1D2B, orange #CE4307, soft white #F4F6F7, and Manrope typography</title>
+  <style>text{font-family:Arial,Helvetica,sans-serif}.label{font-size:12px;font-weight:700;letter-spacing:1px}</style>
+  <rect x="1" y="1" width="1098" height="228" rx="18" fill="#f4f6f7" stroke="#e2e7eb"/>
+  <text x="32" y="42" fill="#b63b04" class="label">A LITTLE CARE IN EVERY DETAIL.</text>
+  <text x="30" y="104" fill="#102230" font-size="46" font-weight="700" letter-spacing="-1.5">Manrope.</text>
+  <text x="32" y="140" fill="#586571" font-size="16">Strong type. Clear forms. Quiet motion.</text>
+  <text x="32" y="184" fill="#586571" font-size="12">Tailwind tokens · accessible controls · reduced-motion support</text>
+  <rect x="557" y="32" width="156" height="166" rx="12" fill="#0b1d2b"/>
+  <text x="575" y="142" fill="#fff" class="label">DEEP NAVY</text><text x="575" y="174" fill="#c6d5df" font-size="13">#0B1D2B</text>
+  <rect x="729" y="32" width="156" height="166" rx="12" fill="#ce4307"/>
+  <text x="747" y="142" fill="#fff" class="label">PARCEL ORANGE</text><text x="747" y="174" fill="#fff" font-size="13">#CE4307</text>
+  <rect x="901" y="32" width="166" height="166" rx="12" fill="#fff" stroke="#dce2e7"/>
+  <text x="919" y="142" fill="#102230" class="label">SOFT WHITE</text><text x="919" y="174" fill="#586571" font-size="13">#F4F6F7</text>
+</svg>

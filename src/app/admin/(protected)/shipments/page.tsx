@@ -1,4 +1,4 @@
-import Link from "next/link";
+import { NavigationLink as Link } from "@/components/navigation-link";
 import { and, desc, eq, like, type SQL } from "drizzle-orm";
 import { z } from "zod";
 import { getDb } from "@/db";

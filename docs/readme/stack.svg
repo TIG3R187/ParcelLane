@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="104" viewBox="0 0 1100 104" role="img" aria-labelledby="title">
+  <title id="title">Next.js, React, TypeScript, Tailwind CSS, Motion, Neon, Drizzle, Better Auth, Paystack test mode, Vitest and Playwright</title>
+  <style>text{font:600 13px Arial,Helvetica,sans-serif;fill:#dce6ec}.pill{fill:#102433;stroke:#294051}.accent{fill:#ff9a63}</style>
+  <g transform="translate(0 4)"><rect class="pill" width="150" height="38" rx="8"/><text x="18" y="24">Next.js <tspan class="accent">App Router</tspan></text></g>
+  <g transform="translate(160 4)"><rect class="pill" width="100" height="38" rx="8"/><text x="28" y="24">React</text></g>
+  <g transform="translate(270 4)"><rect class="pill" width="130" height="38" rx="8"/><text x="29" y="24">TypeScript</text></g>
+  <g transform="translate(410 4)"><rect class="pill" width="145" height="38" rx="8"/><text x="29" y="24">Tailwind CSS</text></g>
+  <g transform="translate(565 4)"><rect class="pill" width="112" height="38" rx="8"/><text x="33" y="24">Motion</text></g>
+  <g transform="translate(687 4)"><rect class="pill" width="105" height="38" rx="8"/><text x="36" y="24">Neon</text></g>
+  <g transform="translate(802 4)"><rect class="pill" width="120" height="38" rx="8"/><text x="38" y="24">Drizzle</text></g>
+  <g transform="translate(932 4)"><rect class="pill" width="168" height="38" rx="8"/><text x="47" y="24">Better Auth</text></g>
+  <g transform="translate(280 56)"><rect class="pill" width="180" height="38" rx="8"/><text x="26" y="24">Paystack <tspan class="accent">TEST ONLY</tspan></text></g>
+  <g transform="translate(470 56)"><rect class="pill" width="115" height="38" rx="8"/><text x="38" y="24">Vitest</text></g>
+  <g transform="translate(595 56)"><rect class="pill" width="140" height="38" rx="8"/><text x="35" y="24">Playwright</text></g>
+</svg>

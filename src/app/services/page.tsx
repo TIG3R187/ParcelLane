@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import Link from "next/link";
+import { NavigationLink as Link } from "@/components/navigation-link";
 import { ArrowRight, CheckCircle2 } from "lucide-react";
 import { PageIntro } from "@/components/page-intro";
 import { ServiceCards } from "@/components/service-cards";

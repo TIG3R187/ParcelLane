@@ -1,4 +1,4 @@
-import Link from "next/link";
+import { NavigationLink as Link } from "@/components/navigation-link";
 import { PackageOpen, ArrowUpRight } from "lucide-react";
 import { formatMoney, statusLabels, type ShipmentStatus } from "@/lib/domain";
 export function ShipmentTable({

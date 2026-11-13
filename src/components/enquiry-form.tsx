@@ -2,7 +2,7 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import Link from "next/link";
+import { NavigationLink as Link } from "@/components/navigation-link";
 export function EnquiryForm({ enabled }: { enabled: boolean }) {
   const [busy, setBusy] = useState(false);
   const [message, setMessage] = useState("");

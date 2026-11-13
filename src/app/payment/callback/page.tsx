@@ -1,4 +1,4 @@
-import Link from "next/link";
+import { NavigationLink as Link } from "@/components/navigation-link";
 import { headers } from "next/headers";
 import { PageIntro } from "@/components/page-intro";
 import { paymentReferenceSchema } from "@/lib/payment-validation";

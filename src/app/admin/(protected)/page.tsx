@@ -1,4 +1,4 @@
-import Link from "next/link";
+import { NavigationLink as Link } from "@/components/navigation-link";
 import { desc, sql } from "drizzle-orm";
 import { ArrowRight, Clock3, Package, Truck, MessageCircle, Plus } from "lucide-react";
 import { getDb } from "@/db";

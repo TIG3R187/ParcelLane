@@ -1,5 +1,5 @@
 import Image from "next/image";
-import Link from "next/link";
+import { NavigationLink as Link } from "@/components/navigation-link";
 import {
   ArrowRight,
   ArrowUpRight,

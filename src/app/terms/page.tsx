@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import Link from "next/link";
+import { NavigationLink as Link } from "@/components/navigation-link";
 import { PageIntro } from "@/components/page-intro";
 
 export const metadata: Metadata = { title: "Terms of service — preview draft" };

@@ -1,4 +1,4 @@
-import Link from "next/link";
+import { NavigationLink as Link } from "@/components/navigation-link";
 import { ArrowRight, PackageOpen } from "lucide-react";
 import { Button } from "@/components/ui/button";
 

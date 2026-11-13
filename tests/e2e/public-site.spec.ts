@@ -58,13 +58,13 @@ test("planner carries locations into the detailed estimate form", async ({ page 
 test("FAQ opens and navigation works at mobile and desktop sizes", async ({ page }, testInfo) => {
   await page.goto("/");
   if (testInfo.project.name === "mobile") {
-    await page.getByRole("button", { name: "Open menu" }).click();
+    await page.getByRole("button", { name: "Toggle navigation" }).click();
     await expect(page.getByRole("navigation", { name: "Mobile navigation" })).toBeVisible();
     await page
       .getByRole("navigation", { name: "Mobile navigation" })
       .getByRole("link", { name: "About us" })
       .click();
-    await expect(page.getByRole("button", { name: "Open menu" })).toBeVisible();
+    await expect(page.getByRole("button", { name: "Toggle navigation" })).toBeVisible();
   } else {
     await page
       .getByRole("navigation", { name: "Main navigation" })

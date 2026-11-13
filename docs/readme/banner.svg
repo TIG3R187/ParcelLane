@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="360" viewBox="0 0 1280 360" role="img" aria-labelledby="title desc">
+  <title id="title">ParcelLane — Deliver with confidence.</title>
+  <desc id="desc">Navy and orange ParcelLane project banner with a moving parcel along a dotted shipping route.</desc>
+  <style>
+    text { font-family: Arial, Helvetica, sans-serif; }
+    .parcel { animation: deliver 7s ease-in-out infinite; }
+    .signal { animation: signal 2s ease-out infinite; transform-origin: 1130px 225px; }
+    @keyframes deliver { 0%,12% { transform: translateX(0); } 70%,100% { transform: translateX(280px); } }
+    @keyframes signal { from { opacity: .65; transform: scale(.6); } to { opacity: 0; transform: scale(1.5); } }
+    @media (prefers-reduced-motion: reduce) { .parcel, .signal { animation: none; } }
+  </style>
+  <rect width="1280" height="360" rx="24" fill="#0b1d2b"/>
+  <path d="M820 0v360M960 0v360M1100 0v360M780 90h500M780 180h500M780 270h500" stroke="#ffffff" stroke-opacity=".035"/>
+  <rect x="48" y="40" width="36" height="36" rx="8" fill="#ce4307"/>
+  <path d="M58 66V50h10l5 5-5 5h-5v6zm5-11h5l-2-2h-3z" fill="white"/>
+  <text x="97" y="66" fill="#fff" font-size="25" font-weight="700">Parcel<tspan fill="#ff9a63">Lane</tspan></text>
+  <text x="50" y="130" fill="#ff9a63" font-size="11" font-weight="700" letter-spacing="3">PACKAGES. PARCELS. POSSIBILITIES.</text>
+  <text x="46" y="196" fill="#fff" font-size="57" font-weight="700" letter-spacing="-2">Deliver with</text>
+  <text x="46" y="257" fill="#fff" font-size="57" font-weight="700" letter-spacing="-2">confidence<tspan fill="#ff7b36">.</tspan></text>
+  <text x="50" y="310" fill="#b4c4cf" font-size="16">A considered shipping experience. Built for Nigeria.</text>
+  <rect x="942" y="40" width="288" height="34" rx="17" fill="#152f40"/>
+  <circle cx="963" cy="57" r="4" fill="#ff9a63"/>
+  <text x="978" y="61" fill="#d8e2e8" font-size="11" letter-spacing="1.2">CUSTOMER PREVIEW · TEMPORARY BRAND</text>
+  <path d="M835 225h295" fill="none" stroke="#e8773b" stroke-width="2" stroke-dasharray="5 8"/>
+  <circle cx="835" cy="225" r="5" fill="#ff9a63"/>
+  <circle class="signal" cx="1130" cy="225" r="25" fill="none" stroke="#ff9a63"/>
+  <circle cx="1130" cy="225" r="7" fill="#ff9a63"/>
+  <g class="parcel">
+    <rect x="817" y="158" width="66" height="58" rx="9" fill="#e6a46c"/>
+    <path d="M850 158v58M837 174h10" stroke="#9d5c2d" stroke-width="3"/>
+    <path d="M840 201h20m-13-4v-6m9 6v-6" stroke="#714222" stroke-width="2"/>
+  </g>
+  <text x="820" y="270" fill="#d6e2e9" font-size="12">REQUEST</text>
+  <text x="1099" y="270" fill="#d6e2e9" font-size="12">DELIVER</text>
+</svg>

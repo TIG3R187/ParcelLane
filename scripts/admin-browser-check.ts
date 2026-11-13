@@ -6,6 +6,7 @@ import { chromium, expect } from "@playwright/test";
 import AxeBuilder from "@axe-core/playwright";
 import { hashPassword } from "better-auth/crypto";
 import { eq, inArray } from "drizzle-orm";
+import { mkdir } from "node:fs/promises";
 
 config({ path: ".env.local", quiet: true });
 const { getDb } = await import("../src/db/index");
@@ -71,6 +72,10 @@ try {
   await page.getByRole("button", { name: "Sign in securely" }).click();
   await page.waitForURL(origin + "/admin", { timeout: 30000 });
   console.log("PASS administrator browser sign-in");
+  if (process.env.PARCELLANE_CAPTURE_DOCS === "true") {
+    await mkdir("docs/readme", { recursive: true });
+    await page.screenshot({ path: "docs/readme/dashboard.png", fullPage: true });
+  }
   stage = "protected pages and accessibility";
   for (const route of [
     "/admin",

@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import Link from "next/link";
+import { NavigationLink as Link } from "@/components/navigation-link";
 import { PageIntro } from "@/components/page-intro";
 import { QuoteForm } from "@/components/quote-form";
 import { quotePreviewSchema } from "@/lib/validation";

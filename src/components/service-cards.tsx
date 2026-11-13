@@ -1,4 +1,4 @@
-import Link from "next/link";
+import { NavigationLink as Link } from "@/components/navigation-link";
 import { ArrowUpRight, Box, Plane, Truck } from "lucide-react";
 import { services } from "@/lib/services";
 
