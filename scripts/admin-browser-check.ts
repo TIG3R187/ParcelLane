@@ -160,6 +160,44 @@ try {
   await page.setViewportSize({ width: 393, height: 852 });
   await page.goto(origin + "/admin");
   assert.ok(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth));
+  stage = "narrow-phone administrator workspace";
+  await page.setViewportSize({ width: 320, height: 568 });
+  await page.getByRole("button", { name: "Operations menu" }).click();
+  await page
+    .getByRole("navigation", { name: "Mobile administrator navigation" })
+    .getByRole("link", { name: "Shipments & bookings" })
+    .click();
+  await page.waitForURL(origin + "/admin/shipments");
+  await expect(
+    page.getByRole("navigation", { name: "Mobile administrator navigation" }),
+  ).toBeHidden();
+  await expect(page.getByRole("list", { name: "Shipment requests" })).toBeVisible();
+  await expect(
+    page.getByRole("link", { name: `Open shipment ${created.trackingNumber}` }),
+  ).toBeVisible();
+  for (const route of [
+    "/admin",
+    "/admin/shipments",
+    "/admin/shipments/new",
+    "/admin/pricing",
+    "/admin/enquiries",
+    "/admin/payments",
+    "/admin/notifications",
+    "/admin/audit",
+  ]) {
+    await page.goto(origin + route);
+    assert.ok(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth), route);
+    if (
+      process.env.PARCELLANE_CAPTURE_DOCS === "true" &&
+      ["/admin", "/admin/shipments"].includes(route)
+    ) {
+      await page.screenshot({
+        path: `docs/readme/${route === "/admin" ? "dashboard" : "shipments"}-mobile.png`,
+        fullPage: true,
+      });
+    }
+  }
+  console.log("PASS eight admin pages at 320px, collapsed operations menu and shipment cards");
   await page.getByRole("button", { name: "Sign out", exact: true }).click();
   await page.waitForURL(origin + "/admin/login", { timeout: 20000 });
   await page.goto(origin + "/admin");

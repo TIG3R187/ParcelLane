@@ -42,7 +42,7 @@ Real screens, recorded from the production build. The tour shows the tracking/qu
     </td>
     <td>
       <h3>A clear next step, wherever you are.</h3>
-      <p>Responsive layouts, readable forms, comfortable touch targets, and a native mobile menu that opens even before JavaScript loads.</p>
+      <p>Phone-first layouts, 16px form inputs, comfortable touch targets, a sticky header, and a native mobile menu that opens even before JavaScript loads.</p>
       <p>Page loading feedback, a short CSS entry animation, keyboard navigation, and reduced-motion support keep the experience considered.</p>
       <p><a href="docs/readme/homepage-mobile.png">View the full mobile screenshot →</a></p>
     </td>
@@ -54,6 +54,16 @@ Real screens, recorded from the production build. The tour shows the tracking/qu
 ![ParcelLane administrator dashboard showing shipment totals, request review, pricing, and navigation, captured with a fictional test administrator](docs/readme/dashboard.png)
 
 _Actual protected dashboard, captured with a temporary fictional test account. No real customer information or credentials appear in these screenshots._
+
+<details>
+<summary><strong>View the phone admin workspace and shipment cards</strong></summary>
+
+The mobile captures use a temporary fictional shipment fixture, not company operating statistics.
+
+<img src="docs/readme/dashboard-mobile.png" alt="Phone administrator dashboard with a collapsed operations menu and a fictional test shipment" width="360" />
+<img src="docs/readme/shipments-mobile.png" alt="Phone shipment list using readable cards instead of a wide table, with fictional test data" width="360" />
+
+</details>
 
 | For customers                                                       | For the business                                          |
 | ------------------------------------------------------------------- | --------------------------------------------------------- |
@@ -143,7 +153,7 @@ npm run build
 npm run test:e2e
 ```
 
-Vitest covers validation, backend pricing, status transitions, identifiers, and payment signatures. Playwright covers desktop/mobile layouts, accessibility, native menu behavior without JavaScript, repeated navigation, delayed route responses, and preview restrictions.
+Vitest covers validation, backend pricing, status transitions, identifiers, and payment signatures. Playwright covers desktop/mobile layouts, accessibility, native menu behavior without JavaScript, repeated navigation, delayed route responses, and preview restrictions. Phone checks cover 320, 360, 390, and 430px widths in Chromium and WebKit, including form typography, landscape menu scrolling, sticky navigation, and narrow-screen admin shipment cards.
 
 Private integration checks also cover real Neon persistence, Better Auth authorization, concurrent rate limits, tracking privacy, and idempotent test-payment confirmation. The admin browser check exercises creation, quote review, status updates, and logout with temporary fictional fixtures.
 

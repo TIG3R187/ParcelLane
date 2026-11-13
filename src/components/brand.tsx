@@ -7,7 +7,7 @@ export function Brand({ light = false }: { light?: boolean }) {
       href="/"
       aria-label="ParcelLane home"
       className={cn(
-        "inline-flex items-center gap-2.5 text-[25px] font-extrabold tracking-[-1.3px]",
+        "brand inline-flex items-center gap-2.5 text-[25px] font-extrabold tracking-[-1.3px]",
         light ? "text-white" : "text-navy",
       )}
     >

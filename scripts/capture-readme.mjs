@@ -89,6 +89,7 @@ try {
 
   await page.setViewportSize({ width: 393, height: 852 });
   await page.goto(origin, { waitUntil: "networkidle" });
+  await page.screenshot({ path: `${output}/homepage-mobile-preview.png` });
   await page.screenshot({ path: `${output}/homepage-mobile.png`, fullPage: true });
   const mobile = [];
   const snap = async (delay = 140) => mobile.push({ image: await page.screenshot(), delay });

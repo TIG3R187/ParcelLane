@@ -19,6 +19,11 @@ export default defineConfig({
       use: { ...devices["Desktop Chrome"], viewport: { width: 1440, height: 1000 } },
     },
     { name: "mobile", use: { ...devices["Pixel 7"] } },
+    {
+      name: "mobile-webkit",
+      testMatch: ["**/navigation.spec.ts", "**/mobile-layout.spec.ts"],
+      use: { ...devices["iPhone 13"], browserName: "webkit" },
+    },
   ],
   webServer: {
     env: {

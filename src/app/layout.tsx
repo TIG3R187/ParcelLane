@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import "@fontsource-variable/manrope";
 import "./globals.css";
 import { SiteHeader } from "@/components/site-header";
@@ -10,6 +10,13 @@ export const metadata: Metadata = {
   description:
     "Thoughtful shipping for the things that matter. Explore express delivery, nationwide shipping in Nigeria, and international cargo with ParcelLane.",
   robots: { index: false, follow: false },
+};
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  viewportFit: "cover",
+  themeColor: "#0b1d2b",
 };
 
 export default async function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {

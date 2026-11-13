@@ -46,6 +46,10 @@ export function TrackingForm({
             defaultValue={defaultValue}
             placeholder="Enter your tracking number"
             autoComplete="off"
+            autoCapitalize="characters"
+            autoCorrect="off"
+            spellCheck={false}
+            enterKeyHint="search"
             maxLength={40}
             required
             aria-invalid={!!error}
@@ -72,11 +76,13 @@ export function TrackingForm({
     <div className="tracking-panel">
       <Tabs defaultValue="track">
         <TabsList aria-label="Shipment tools">
-          <TabsTrigger value="track">
-            <PackageSearch /> Track a parcel
+          <TabsTrigger value="track" aria-label="Track a parcel">
+            <PackageSearch /> <span className="sm:hidden">Track parcel</span>
+            <span className="hidden sm:inline">Track a parcel</span>
           </TabsTrigger>
-          <TabsTrigger value="quote">
-            <Calculator /> Request a quote
+          <TabsTrigger value="quote" aria-label="Request a quote">
+            <Calculator /> <span className="sm:hidden">Get a quote</span>
+            <span className="hidden sm:inline">Request a quote</span>
           </TabsTrigger>
         </TabsList>
         <TabsContent value="track">{form}</TabsContent>

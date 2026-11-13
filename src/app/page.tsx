@@ -67,9 +67,12 @@ export default function HomePage() {
               <br />
               confidence<span className="text-primary">.</span>
             </h1>
-            <p className="mt-6 max-w-[415px] text-base leading-7 text-slate-200 sm:text-[17px]">
-              Across the city. Across Nigeria. Across borders.
-              <br className="hidden sm:block" /> Thoughtful shipping for the things that matter.
+            <p className="hero-copy mt-6 max-w-[415px] text-base leading-7 text-slate-200 sm:text-[17px]">
+              <span className="sm:hidden">Thoughtful shipping, across Nigeria and beyond.</span>
+              <span className="hidden sm:inline">
+                Across the city. Across Nigeria. Across borders.
+                <br /> Thoughtful shipping for the things that matter.
+              </span>
             </p>
             <TrackingForm />
             <div className="mt-6 flex flex-wrap gap-x-6 gap-y-3 text-[11px] font-medium text-slate-200">

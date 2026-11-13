@@ -2,7 +2,7 @@
 
 import { NavigationLink as Link } from "@/components/navigation-link";
 import { usePathname } from "next/navigation";
-import { useRef } from "react";
+import { useEffect, useRef } from "react";
 import { ArrowRight, ChevronDown, Menu, X } from "lucide-react";
 import { Brand } from "@/components/brand";
 import { Button } from "@/components/ui/button";
@@ -18,6 +18,26 @@ export function SiteHeader() {
   const menu = useRef<HTMLDetailsElement>(null);
   const pathname = usePathname();
   const closeMenu = () => menu.current?.removeAttribute("open");
+  useEffect(() => {
+    const dismissOutside = (event: PointerEvent) => {
+      if (
+        menu.current?.open &&
+        event.target instanceof Node &&
+        !menu.current.contains(event.target)
+      )
+        closeMenu();
+    };
+    const desktop = window.matchMedia("(min-width: 1024px)");
+    const dismissOnDesktop = () => {
+      if (desktop.matches) closeMenu();
+    };
+    document.addEventListener("pointerdown", dismissOutside);
+    desktop.addEventListener("change", dismissOnDesktop);
+    return () => {
+      document.removeEventListener("pointerdown", dismissOutside);
+      desktop.removeEventListener("change", dismissOnDesktop);
+    };
+  }, []);
   if (pathname.startsWith("/admin")) return null;
   return (
     <>

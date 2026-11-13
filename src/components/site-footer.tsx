@@ -6,7 +6,7 @@ export function SiteFooter() {
   return (
     <footer className="site-footer">
       <div className="shell">
-        <div className="grid gap-10 pb-12 md:grid-cols-[1.5fr_1fr_1fr_1fr]">
+        <div className="footer-grid grid gap-10 pb-12 md:grid-cols-[1.5fr_1fr_1fr_1fr]">
           <div>
             <Brand light />
             <p className="mt-5 max-w-[270px] text-sm leading-7 text-slate-300">

@@ -62,3 +62,16 @@ DNS follow-up: Google Public DNS resolved the canonical customer URL to 64.29.17
 - Paystack test integration and SMTP adapter remain implemented but disabled/unconfigured; no actual provider checkout or delivery is claimed. No GitHub push was performed by the agent.
 
 Final live recheck: the new canonical URL loaded through normal DNS with no host/edge overrides. Real Vercel mobile menu opening, repeated page navigation, browser back, native menu without JavaScript, canonical owner HTTPS login/dashboard/logout, and disabled public submission endpoints all passed. No browser console/hydration errors were observed. All owned browsers and local capture/test servers were closed; no GitHub push or paid upgrade was performed.
+
+## Mobile-first refinements — 13 November 2026
+
+- [x] Sticky mobile header, safe-area spacing, scrollable landscape menu, outside-click/Escape handling, and close-on-navigation/desktop resize.
+- [x] Fix narrow booking-form overflow; use at least 16px form text and comfortable touch targets. Keep browser zoom available and preserve native keyboard behavior.
+- [x] Fit tracking tabs and the primary tracking action on a 320×568 phone; improve mobile hero spacing and readable footer navigation.
+- [x] Collapse admin navigation into an Operations menu; show shipment cards on phones and tables on desktop. Stack narrow filters and wrap long tracking identifiers.
+- [x] Check 15 public routes at 320, 360, 390, and 430px in Chromium and WebKit; cover landscape scrolling, sticky navigation, and menu behavior without JavaScript.
+- [x] Run the authenticated administrator workflow and all eight admin pages at 320px; verify accessible navigation and shipment cards. Fictional fixtures removed.
+- [x] Refresh public GIFs/screenshots and fictional mobile admin screenshots; visually inspect the narrow homepage, booking form, landscape menu, dashboard, and shipment list.
+- [x] ESLint, strict TypeScript, 47 unit tests, and the production build passed after the mobile changes.
+
+Browser automation uses Chromium and WebKit emulation; physical iPhone/Android devices have not been tested. Optional Paystack and SMTP remain disabled, and no paid service or GitHub push is part of these refinements. The latest results below supersede the earlier browser counts.

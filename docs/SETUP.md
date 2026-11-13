@@ -128,11 +128,11 @@ npm run typecheck
 npm test
 npm run db:check
 npm run build
-npx playwright install chromium
+npx playwright install chromium webkit
 npm run test:e2e
 ```
 
-Playwright runs the production server on port 3100, desktop and mobile Chromium, public-page accessibility, form validation, routing, security headers, and closed preview/admin endpoints. It uses no credentials in CI. Browser reports are ignored. Physical-device, Safari, manual assistive-technology, and independent penetration testing remain outside these checks.
+Playwright runs the production server on port 3100, desktop/mobile Chromium plus selected mobile WebKit checks, public-page accessibility, form validation, routing, security headers, and closed preview/admin endpoints. It uses no credentials in CI. Browser reports are ignored. Physical-device Safari, manual assistive-technology, and independent penetration testing remain outside these checks; WebKit coverage uses browser emulation.
 
 `npm run test:integration` uses the explicitly configured Neon database: it creates clearly fictional temporary fixtures, checks Better Auth and authorization, concurrent persistent rate limits, server pricing, shipment history/privacy, and idempotent payments with the provider mocked, then removes its fixtures. Run only against an authorized development database; never point CI at production. It sends no emails and makes no real Paystack calls.
 
